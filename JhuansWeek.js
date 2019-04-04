@@ -1,6 +1,6 @@
 
 let myDiv = document.querySelector("#first");
-myDiv.style.backgroundColor = "blue";
+ myDiv.style.backgroundColor = "red";
 
 class People{
     constructor(firstName, lastName, age, job, gender){
@@ -12,34 +12,34 @@ class People{
       this.gender = gender;
     }
         eat(){
-        document.write(this.firstName +" is eating a meal");
+        return `${this.firstName} is eating a meal`;
         //return `${this.firstName} is eating!`
     }//end eat method
         poop(){
-            document.write(this.firstName +" is taking a poop, wish him luck");
+            return `${this.firstName} is taking a poop, wish him luck`;
     }//ends poop
         hunting(){
-            document.write(this.firstName +" is hunting for food");
+            return `${this.firstName} is hunting for food`;
     }//ends hunting
         Driving(){
-            document.write(this.firstName +" is traveling");
+            return `${this.firstName} is traveling`;
     }//ends driving
         barfight(){
-            document.write(this.firstName +" is in a fight");
+            return `${this.firstName} is in a fight`;
     }//ends barfight
         Church(){
-            document.write(this.firstName +" is in church praising the lort");
+            return `${this.firstName} is in church praising the lort`;
     }//ends church
         working(){
-            //document.write(this.firstName +" is at work for the day");
+            //return`${this.firstName} is at work for the day");
         
             return `${this.firstName} is at work for the day!`
     }//ends working
         sleeping(){
-            document.write(this.firstName +" is sound asleep");
+            return `${this.firstName} is sound asleep`;
     }//ends sleeping
         watchingTv(){
-            document.write(this.firstName +" is watching tv with lover");
+            return `${this.firstName} is watching tv with lover`;
     }//ends watchingTv
 } 
 
