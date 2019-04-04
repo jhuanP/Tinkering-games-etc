@@ -1,6 +1,9 @@
-
+//query selector creation for front-end display
 let myDiv = document.querySelector("#first");
- myDiv.style.backgroundColor = "red";
+//set style element for the div
+myDiv.style.backgroundColor = "red";
+let newDiv = document.querySelector("#second");
+newDiv.style.backgroundColor = "white";
 
 class People{
     constructor(firstName, lastName, age, job, gender){
@@ -54,29 +57,41 @@ class People{
     //Jay.eat();
     //Sharena.Church();
     //Sharena.Driving();
+
+    //timeout slows the alerts to allow the Html page to load first
    setTimeout(function (){
     let day = prompt("What day of the week is it");
     let today = day.toLowerCase();
     if(today.includes("sat")){
         myDiv.textContent = Jay.hunting();
+        newDiv.textContent = "Its better to be the hunter than the prey";
+
     }else if(today.includes("sun")){
         myDiv.textContent = Jay.Church();
+        newDiv.textContent = "Halelujerr!";
+
     }
-    //if (day.toLowerCase() == "Monday" || day.toLowerCase() == "Tuesday"){
+    //if statement to narrow down which day it is
     else if(today.includes("mon") || today.includes("tue") || today.includes("wed") || today.includes("thu") || today.includes("fri") ){    
+        //creating variable to compare for time of day
         let time = prompt("what time is it? (Military)");
+        //if statements to call functions at given times 
         if ( time > 1700 && time <= 1800 || time == 700 && time <= 800){
             myDiv.textContent = Jay.Driving();
+            newDiv.textContent = "Remember slow and steady wins the race";
             }else if (time >= 800 && time <= 1700 ){
                 myDiv.textContent = Jay.working();
+                newDiv.textContent = "Is he working Hard or hardly working?";
             }else if(time >= 2200 || time <= 600){
                 myDiv.textContent = Jay.sleeping();
+                newDiv.textContent = "Sweet Dreams Buttercup!";
             }else if (time > 1800 && time < 2200){
                 myDiv.textContent = Jay.watchingTv();
+                newDiv.textContent = "I hope its a good show!";
             }else{
                 document.write("Please refresh page");
-            }
-        }//ends if 
+            }//closes else
+        }//closes if 
     else{
         document.write("please refresh page");
     }//ends else
