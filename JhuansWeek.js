@@ -4,6 +4,8 @@ let myDiv = document.querySelector("#first");
 myDiv.style.backgroundColor = "red";
 let newDiv = document.querySelector("#second");
 newDiv.style.backgroundColor = "white";
+let divImage = document.querySelector("#third");
+
 
 class People{
     constructor(firstName, lastName, age, job, gender){
@@ -36,13 +38,13 @@ class People{
         working(){
             //return`${this.firstName} is at work for the day");
         
-            return `${this.firstName} is at work for the day!`
+            return `${this.firstName} is being a ${this.job} for the day!`
     }//ends working
         sleeping(){
             return `${this.firstName} is sound asleep`;
     }//ends sleeping
         watchingTv(){
-            return `${this.firstName} is watching tv with lover`;
+            return `${this.firstName} is watching tv`;
     }//ends watchingTv
 } 
 
@@ -69,6 +71,7 @@ class People{
     }else if(today.includes("sun")){
         myDiv.textContent = Jay.Church();
         newDiv.textContent = "Halelujerr!";
+       // `${divImage}` = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj2vIm7_7bhAhUqU98KHaZ_B4MQjRx6BAgBEAU&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_1158156_golden-cross.html&psig=AOvVaw1iixu-FOkvYNNS3EWzGPrQ&ust=1554486457191326";
 
     }
     //if statement to narrow down which day it is
