@@ -16,14 +16,23 @@ class People{
       this.job = job;
       this.gender = gender;
     }
-        eat(){
+        eatL(){
             newDiv.textContent = "Man that sure is alot of food!";
-        return `${this.firstName} is eating a meal`;
+        return `${this.firstName} is eating Lunch`;
         //return `${this.firstName} is eating!`
     }//end eat method
-        poop(){
-            return `${this.firstName} is taking a poop, wish him luck`;
-    }//ends poop
+        eatB(){ 
+        newDiv.textContent = "Man that sure is alot of food!";
+        return `${this.firstName} is eating Breakfast`;
+        }//closes eatB
+        pvG(){
+            newDiv.textContent = "Take it easy on the online players for once!";
+            return `${this.firstName} is playing video games`;
+    }//ends pvg
+         onSM(){
+        newDiv.textContent = "You are in a Drama free zone, proceed with caution!";
+        return `${this.firstName} is scrolling newsfeeds`;
+    }//ends pvg
         hunting(){
             newDiv.textContent = "Its better to be the hunter than the prey";
             return `${this.firstName} is hunting for food`;
@@ -32,11 +41,13 @@ class People{
             newDiv.textContent = "Remember slow and steady wins the race";
             return `${this.firstName} is traveling`;
     }//ends driving
-        barfight(){
-            return `${this.firstName} is in a fight`;
+        pracCode(){
+            newDiv.textContent = `${this.firstName} knows google is a friend`
+            return `${this.firstName} working on coding skills`;
     }//ends barfight
         Church(){
-            return `${this.firstName} is in church praising the lort`;
+            newDiv.textContent = "When you accept Jesus as your lord and savior heaven is your home";
+            return `${this.firstName} is in church praising the lord`;
     }//ends church
         working(){
             newDiv.textContent = `Is ${this.firstName} working Hard or hardly working?`;
@@ -59,7 +70,7 @@ class People{
             return `${this.firstName} is cooking something for breakfast`;
         }//ends cooking
         cookingL(){
-            newDiv.textContent = "Sure smell delish!";
+            newDiv.textContent = "Sure smell delish !";
             return `${this.firstName} is cooking something for Lunch`;
         }//ends cooking
 }//ends People class 
@@ -78,43 +89,43 @@ class People{
 
     //timeout slows the alerts to allow the Html page to load first
    setTimeout(function (){
-    let user = prompt("Who are you?").toString();
+    let user = prompt("Who are you?").toString().toLowerCase();
     let day = prompt("What day of the week is it");
     let today = day.toLowerCase();
     if(today.includes("sat")){
            //creating variable to compare for time of day
-           let time = prompt("what time is it? (Military)");
+           let time = prompt("what time is it? (Military without symbol e.g. 0000 is 12am)");
            //if statements to call functions at given times 
            if ( time > 1700 && time <= 1800 || time == 700 && time <= 800){
-              if(user == "Jhuan" || user == "Jay"){
-               myDiv.textContent = Jay.eat();
-                   }else if(user == "Sharena"){
-                       myDiv.textContent = Sharena.cooking();
-                   }else if (user == "Christian"){
-                       myDiv.textContent = Christian.eat();
+              if(user == "jhuan" || user == "jay"){
+               myDiv.textContent = Jay.eatB();
+                   }else if(user == "sharena"){
+                       myDiv.textContent = Sharena.cookingB();
+                   }else if (user == "christian"){
+                       myDiv.textContent = Christian.eatB();
    
                    } else{
                        myDiv.textContent = `${user} not in the system`;
                    }
                }//closes first time if
                else if (time >= 800 && time <= 1700 ){
-                   if(user == "Jhuan" || user == "Jay"){
-                   myDiv.textContent = Jay.working();
-                       }else if(user == "Sharena"){
-                           myDiv.textContent = Sharena.working();
-                       }else if (user == "Christian"){
-                           myDiv.textContent = Christian.school();
+                   if(user == "jhuan" || user == "jay"){
+                   myDiv.textContent = Jay.pvG();
+                       }else if(user == "sharena"){
+                           myDiv.textContent = Sharena.onSM();
+                       }else if (user == "christian"){
+                           myDiv.textContent = Christian.pvG();
                
                        } else{
                            myDiv.textContent = `${user} not in the system`;
                        }
                }//closes second time if
                else if(time >= 2200 && time <= 2400 || time <= 600){
-                   if(user == "Jhuan" || user == "Jay"){
+                   if(user == "jhuan" || user == "jay"){
                        myDiv.textContent = Jay.sleeping();
-                           }else if(user == "Sharena"){
+                           }else if(user == "sharena"){
                                myDiv.textContent = Sharena.sleeping();
-                           }else if (user == "Christian"){
+                           }else if (user == "christian"){
                                myDiv.textContent = Christian.sleeping();
                    
                            } else{
@@ -122,11 +133,11 @@ class People{
                            }         
                   }//closes third time if
                else if (time > 1800 && time < 2200){
-                   if(user == "Jhuan" || user == "Jay"){
+                   if(user == "jhuan" || user == "jay"){
                        myDiv.textContent = Jay.watchingTv();
-                           }else if(user == "Sharena"){
+                           }else if(user == "sharena"){
                                myDiv.textContent = Sharena.watchingTv();
-                           }else if (user == "Christian"){
+                           }else if (user == "christian"){
                                myDiv.textContent = Christian.watchingTv();
                    
                            } else{
@@ -139,38 +150,38 @@ class People{
            }//closes if 
        else if(today.includes("sun")){
            //creating variable to compare for time of day
-           let time = prompt("what time is it? (Military)");
+           let time = prompt("what time is it? (Military without symbol e.g. 0000 is 12am)");
            //if statements to call functions at given times 
            if ( time > 1700 && time <= 1800 || time == 700 && time <= 800){
-              if(user == "Jhuan" || user == "Jay"){
-               myDiv.textContent = Jay.Driving();
-                   }else if(user == "Sharena"){
-                       myDiv.textContent = Sharena.Driving();
-                   }else if (user == "Christian"){
-                       myDiv.textContent = Christian.eat();
+              if(user == "jhuan" || user == "jay"){
+               myDiv.textContent = Jay.pvG();
+                   }else if(user == "sharena"){
+                       myDiv.textContent = Sharena.cookingL();
+                   }else if (user == "christian"){
+                       myDiv.textContent = Christian.pvG();
    
                    } else{
                        myDiv.textContent = `${user} not in the system`;
                    }
                }//closes first time if
                else if (time >= 800 && time <= 1700 ){
-                   if(user == "Jhuan" || user == "Jay"){
-                   myDiv.textContent = Jay.working();
-                       }else if(user == "Sharena"){
-                           myDiv.textContent = Sharena.working();
-                       }else if (user == "Christian"){
-                           myDiv.textContent = Christian.school();
+                   if(user == "jhuan" || user == "jay"){
+                   myDiv.textContent = Jay.Church();
+                       }else if(user == "sharena"){
+                           myDiv.textContent = Sharena.Church();
+                       }else if (user == "christian"){
+                           myDiv.textContent = Christian.Church();
                
                        } else{
                            myDiv.textContent = `${user} not in the system`;
                        }
                }//closes second time if
                else if(time >= 2200 && time <= 2400 || time <= 600){
-                   if(user == "Jhuan" || user == "Jay"){
+                   if(user == "jhuan" || user == "jay"){
                        myDiv.textContent = Jay.sleeping();
-                           }else if(user == "Sharena"){
+                           }else if(user == "sharena"){
                                myDiv.textContent = Sharena.sleeping();
-                           }else if (user == "Christian"){
+                           }else if (user == "christian"){
                                myDiv.textContent = Christian.sleeping();
                    
                            } else{
@@ -178,12 +189,12 @@ class People{
                            }         
                   }//closes third time if
                else if (time > 1800 && time < 2200){
-                   if(user == "Jhuan" || user == "Jay"){
-                       myDiv.textContent = Jay.watchingTv();
-                           }else if(user == "Sharena"){
+                   if(user == "jhuan" || user == "jay"){
+                       myDiv.textContent = Jay.pracCode();
+                           }else if(user == "sharena"){
                                myDiv.textContent = Sharena.watchingTv();
-                           }else if (user == "Christian"){
-                               myDiv.textContent = Christian.watchingTv();
+                           }else if (user == "christian"){
+                               myDiv.textContent = Christian.pvG();
                    
                            } else{
                                myDiv.textContent = `${user} not in the system`;
@@ -192,21 +203,18 @@ class People{
                else{
                    document.write("Please refresh page and enter valid military time");
                }//closes else
-           }//closes if 
-       else{
-           document.write("please refresh page");
-       }//ends else
+           }//closes if sunday 
     //if statement to narrow down which day it is
     else if(today.includes("mon") || today.includes("tue") || today.includes("wed") || today.includes("thu") || today.includes("fri") ){    
         //creating variable to compare for time of day
-        let time = prompt("what time is it? (Military)");
+        let time = prompt("what time is it? (Military without symbol e.g. 0000 is 12am)");
         //if statements to call functions at given times 
         if ( time > 1700 && time <= 1800 || time == 700 && time <= 800){
-           if(user == "Jhuan" || user == "Jay"){
+           if(user == "jhuan" || user == "jay"){
             myDiv.textContent = Jay.Driving();
-                }else if(user == "Sharena"){
+                }else if(user == "sharena"){
                     myDiv.textContent = Sharena.Driving();
-                }else if (user == "Christian"){
+                }else if (user == "christian"){
                     myDiv.textContent = Christian.eat();
 
                 } else{
@@ -214,11 +222,11 @@ class People{
                 }
             }//closes first time if
             else if (time >= 800 && time <= 1700 ){
-                if(user == "Jhuan" || user == "Jay"){
+                if(user == "jhuan" || user == "jay"){
                 myDiv.textContent = Jay.working();
-                    }else if(user == "Sharena"){
+                    }else if(user == "sharena"){
                         myDiv.textContent = Sharena.working();
-                    }else if (user == "Christian"){
+                    }else if (user == "christian"){
                         myDiv.textContent = Christian.school();
             
                     } else{
@@ -226,11 +234,11 @@ class People{
                     }
             }//closes second time if
             else if(time >= 2200 && time <= 2400 || time <= 600){
-                if(user == "Jhuan" || user == "Jay"){
+                if(user == "jhuan" || user == "jay"){
                     myDiv.textContent = Jay.sleeping();
-                        }else if(user == "Sharena"){
+                        }else if(user == "sharena"){
                             myDiv.textContent = Sharena.sleeping();
-                        }else if (user == "Christian"){
+                        }else if (user == "christian"){
                             myDiv.textContent = Christian.sleeping();
                 
                         } else{
@@ -238,11 +246,11 @@ class People{
                         }         
                }//closes third time if
             else if (time > 1800 && time < 2200){
-                if(user == "Jhuan" || user == "Jay"){
+                if(user == "jhuan" || user == "jay"){
                     myDiv.textContent = Jay.watchingTv();
-                        }else if(user == "Sharena"){
+                        }else if(user == "sharena"){
                             myDiv.textContent = Sharena.watchingTv();
-                        }else if (user == "Christian"){
+                        }else if (user == "christian"){
                             myDiv.textContent = Christian.watchingTv();
                 
                         } else{
