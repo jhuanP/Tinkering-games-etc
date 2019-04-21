@@ -79,8 +79,9 @@ class People{
     let Jay = new People ("Jhuan", "Pressley", 31, "Devops Engineer", "male");
     let Sharena = new People ("Sharena", "Bess", 33, "Merchandise Manager", "female")
     let Christian = new People ("Christian", "Bess", 11, "fortnite streamer", "male")
-    
-    
+    let Wayne = new People ("Wayne", "Bess", 67, "Quality Technician", "male")
+    let Cynthia = new People ("Cynthia", "Bess", 66, "Retired", "female")
+    //console.log(Cynthia.firstName);
     //console.log(Sharena);
     //console.log(jay.firstName);
     //Jay.eat();
@@ -169,13 +170,13 @@ class People{
                    myDiv.textContent = Jay.Church();
                        }else if(user == "sharena"){
                            myDiv.textContent = Sharena.Church();
-                       }else if (user == "christian"){
+                       }else if(user == "christian"){
                            myDiv.textContent = Christian.Church();
                
                        } else{
                            myDiv.textContent = `${user} not in the system`;
                        }
-               }//closes second time if
+               }//closes 8am - 5pm time if
                else if(time >= 2200 && time <= 2400 || time <= 600){
                    if(user == "jhuan" || user == "jay"){
                        myDiv.textContent = Jay.sleeping();
